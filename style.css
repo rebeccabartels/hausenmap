@@ -1,0 +1,15 @@
+<style>
+body {
+  padding:0;
+  margin:0;
+}
+#map {
+  display:inline-block;
+  width:600px;
+  height:400px;
+}
+button {
+  position:absolute;
+  top:410px;
+}
+</style>
