@@ -1,5 +1,6 @@
 <style>
 body {
+  height: 100%
   padding:0;
   margin:0;
 }
@@ -7,9 +8,28 @@ body {
   display:inline-block;
   width:600px;
   height:400px;
+
 }
 button {
   position:absolute;
   top:410px;
 }
 </style>
+
+
+html, body, #map {
+  height: 100%;
+}
+
+
+// Change something about the popup via CSS
+.leaflet-popup { // Or.. .leaflet-measure-resultpopup for only applying to measure
+  color: #339966;
+  font-size: 2em;
+}
+.leaflet-retina .leaflet-measure-resultpopup a.zoomto, .leaflet-retina .leaflet-measure-resultpopup a.deletemarkup, .leaflet-measure-resultpopup a.deletemarkup, .leaflet-measure-resultpopup a.zoomto, .leaflet-measure-resultpopup a.deletemarkup {
+  padding-left: 28px;
+  background-size: 100px 120px;
+}
+
+

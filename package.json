@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/CliffCloud/Leaflet.EasyButton",
   "dependencies": {
-    "leaflet": "^1.0.1"
+    "leaflet": "^1.0.1",
+    "leaflet.measurecontrol": "^1.1.0"
   },
   "devDependencies": {
     "@types/leaflet": "^1.2.0"
