@@ -14,40 +14,9 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 //var leafletDraw = require(leaflet-draw);
 
 L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();
+    .bindPopup("hi")
 
 
-  // add multiple data layers (defined above ... sloppy!)
-  //window.data1 = L.geoJson(data1).addTo(map);
-  //window.data2 = L.geoJson(data2).addTo(map);
-
-
-  // toggle variable to use in togglePoints();
-  window.toggle = false;
-
-function togglePoints() {
-  if(!toggle) {
-    map.removeLayer(data1);
-  } else {
-    map.addLayer(data1);
-  }
-  toggle = !toggle;
-}
-//window.onload = init();
-
-var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [52.5097, 13.3728]
-    }
-};
 
 
 
