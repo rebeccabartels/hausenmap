@@ -16,7 +16,9 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 //worms 
 L.marker([49.6341, 8.3507]).addTo(map)
     .bindPopup("Worms, 1171-1175")
-
+//Mainz 
+L.marker([49.9929, 8.2473]).addTo(map)
+    .bindPopup("Mainz")
 
 
 
