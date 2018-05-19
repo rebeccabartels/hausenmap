@@ -13,8 +13,10 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 
 //var leafletDraw = require(leaflet-draw);
 
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup("hi")
+//worms 
+L.marker([49.6341, 8.3507]).addTo(map)
+    .bindPopup("Worms, 1171-1175")
+
 
 
 
