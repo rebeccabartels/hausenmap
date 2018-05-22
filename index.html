@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<div id="hello"></div>
+	<div id="hello"></div>
 				<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 				<link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
 				<link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet'type='text/css'>
 				<link rel="stylesheet" type="text/css" href="style.css">
 				<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/images/layers-2x.png'>
 				<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-				<div id="map"></div>
+				<link rel="stylesheet" href="https://js.arcgis.com/3.24/dijit/themes/tundra/tundra.css">
+    			<link rel="stylesheet" href="https://js.arcgis.com/3.24/esri/css/esri.css">
+	<div id="map"></div><br>
+	<div>
+				<span>Stream service url: </span><input type="text" id="txtStreamUrl" value="https://geoeventsample1.esri.com:6443/arcgis/rest/services/LABus/StreamServer" style="color:#ffffff; width:600px; background-color: #8b0000"/><br>
+      			<input type="button" id="cmdToggleStreamLayer" value="Make Stream Layer" />
+    </div>
+    <div id="divFilterControls" class="controls" style="display: none">
+      			<p>Draw extent to filter messages by a bounding box</p>
+     			<input type="button" id="cmdToggleSpatialFilter" value="Draw Extent" /><br>
+    </div>
+
+
+
 		</head>
 		<body>
 					<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 					<script type="text/javascript" src="index.js"></script>
 					</script>
 					<html lang="en">
+	<div class="controls">
 		</body>
 				<meta name="viewport" content="width=device-width" charset="UTF-8">
 			<title>leaflet starter</title>
+			<script src="https://js.arcgis.com/3.24/"></script>
 			<script>
  	//functions 
  			$(document).ready(function(){
@@ -27,6 +42,6 @@
 		<script type ="text/javascript">
         			what();
         			function what(){
-            		document.getElementById('hello').innerHTML = (people);
+            		document.getElementById('hello').innerHTML = "hello"
         			};</script>
 	</html> 
