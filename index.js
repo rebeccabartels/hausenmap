@@ -3,6 +3,8 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
+var geojsonLayer = new L.GeoJSON();
+
 // initialize map object with view
 var map = L.map('map', { measureControl:true}, {drawControl: true}).setView([51.1657, 10.4515], 4);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -21,41 +23,24 @@ L.marker([49.9929, 8.2473]).addTo(map)
     .bindPopup("Mainz")
 
 //geojson 
-var states = [{
-    "type": "Feature",
-    "properties": {"party": "Republican"},
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-            [49.6341, 8.3507],
-            [-97.22,  48.98],
-            [-96.58,  45.94],
-            [-104.03, 45.94],
-            [-104.05, 48.99]
-        ]]
+var user_profile = { 
+  "username" : "SammyShark",
+  "social_media" : [
+    {
+      "description" : "twitter",
+      "link" : "https://twitter.com/digitalocean"
+    },
+    {
+      "description" : "facebook",
+      "link" : "https://www.facebook.com/DigitalOceanCloudHosting"
+    },
+    {
+      "description" : "github",
+      "link" : "https://github.com/digitalocean"
     }
-}, {
-    "type": "Feature",
-    "properties": {"party": "Democrat"},
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-            [49.6341, 8.3507],
-            [-102.06, 40.99],
-            [-102.03, 36.99],
-            [-109.04, 36.99],
-            [-109.05, 41.00]
-        ]]
-    }
-}];
+  ]
+}
 
+var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
 
-L.geoJSON(states, {
-    style: function(feature) {
-        switch (feature.properties.party) {
-            case 'Locations of Hausen': return {color: "#ff0000"};
-            case 'The Jewish Pogroms':   return {color: "#0000ff"};
-        }
-    }
-}).addTo(map);
-
+var obj = JSON.parse(s)

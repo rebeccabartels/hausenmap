@@ -34,3 +34,8 @@ html, body, #map {
 }
 
 
+.icon {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 4px;
+}
