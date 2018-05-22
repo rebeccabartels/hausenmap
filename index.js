@@ -41,6 +41,25 @@ var user_profile = {
   ]
 }
 
-var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
+var people = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
 
-var obj = JSON.parse(s)
+var obj = JSON.parse(people)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
