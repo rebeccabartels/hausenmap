@@ -7,22 +7,36 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
-var geojsonLayer = new L.GeoJSON();
+
 
 // initialize map object with view
-var map = L.map('map', { measureControl:true}, {drawControl: true}).setView([49.8857, 7.5515], 7);
+var map = L.map('map', { measureControl:true}, {drawControl: true}).setView([49.8857, 7.5515], 8);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community', 
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     attribution: 'L.geoJSON(geojsonFeature).addTo(map);'
 }).addTo(map);
 
- //- not sure if needed yet 
-//icons 
-//worms 
+ 
+$(".legend-container").append( $("#legend") );
+$(".legend-toggle").append( "<i class='legend-toggle-icon fa fa-info fa-2x' style='color: #000'></i>" );
 
+/*Legend specific*/
+var legend = L.control({ position: "bottomleft" });
 
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h4>Tegnforklaring</h4>";
+  div.innerHTML += '<i style="background: #477AC2"></i><span>Spring</span><br>';
+  div.innerHTML += '<i style="background: #448D40"></i><span>Summer</span><br>';
+  div.innerHTML += '<i style="background: #E6E696"></i><span>Fall</span><br>';
+  div.innerHTML += '<i style="background: #E8E6E0"></i><span>Winter</span><br>';
+  return div;
+};
 
+legend.addTo(map);
+
+//localities hausen map 1 
 
 L.marker([49.6341, 8.3507]).addTo(map)
     .bindPopup("Worms, 1171-1175")
